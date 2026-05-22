@@ -4,6 +4,12 @@ async function loadProjects() {
 
   const container = document.getElementById("projects-container");
 
+  const commands = {
+    cd: changeDirectory,
+    help: showHelp,
+    clear: clearTerminal,
+  };
+
   projects.forEach(project => {
     const card = `
             <div class = "col-md-12">
@@ -26,7 +32,7 @@ async function loadProjects() {
                 View GitHub
                 </a>
 
-                <p class="cart-text">
+                <p class="card-text">
                     ${project.description}
                 </p>
             </div>
@@ -44,10 +50,20 @@ function getData() {
 }
 
 function parseCommand(e) {
-    if (e.key === "Enter") {
-      const input = document.getElementById("terminalInput").value;
-      console.log(input);
-    }
+  const pages = ["index", "contact", "portfolio"];
+  const commands = {
+    cd: changeDirectory,
+    help: showHelp,
+    clear: clearTerminal,
+  };
+  
+  if (e.key === "Enter") {
+    const input = document.getElementById("terminalInput").value;
+    const tokens = input.split(" ");
+    const command = tokens[0];
+    const arg = tokens[1];
+    commands[tokens[0]];
+  }
 }
 
 getData();
