@@ -4,12 +4,6 @@ async function loadProjects() {
 
   const container = document.getElementById("projects-container");
 
-  const commands = {
-    cd: changeDirectory,
-    help: showHelp,
-    clear: clearTerminal,
-  };
-
   projects.forEach(project => {
     const card = `
             <div class = "col-md-12">
@@ -44,25 +38,52 @@ async function loadProjects() {
   });
 }
 
+async function changeDirectory(arg) {
+  window.open("http://127.0.0.1:5500/" + arg + ".html");
+}
+
 function getData() {
   const val = document.getElementById("terminalInput");
   val.addEventListener("keydown", parseCommand);
 }
 
+function showHelp() {
+  console.log("Dummy help text");
+}
+
+function clearTerminal() {
+  console.log("invoked clear");
+}
+
+const commands = {
+  cd: changeDirectory,
+  help: showHelp,
+  clear: clearTerminal,
+};
+
 function parseCommand(e) {
   const pages = ["index", "contact", "portfolio"];
-  const commands = {
-    cd: changeDirectory,
-    help: showHelp,
-    clear: clearTerminal,
-  };
-  
+
   if (e.key === "Enter") {
-    const input = document.getElementById("terminalInput").value;
-    const tokens = input.split(" ");
+    const input = document.getElementById("terminalInput").value.trim();
+    const tokens = input.split(/\s+/);
+
     const command = tokens[0];
     const arg = tokens[1];
-    commands[tokens[0]];
+
+    if (!commands[command]) {
+      console.log("command not found");
+      return;
+    }
+    
+    if (command === "cd") {
+      if (pages.includes(arg)) {
+        commands[command](arg);
+      } else {
+        console.log("Invalid page.")
+      }
+    }
+    commands[command]();
   }
 }
 
