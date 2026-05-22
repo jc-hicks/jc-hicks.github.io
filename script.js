@@ -6,7 +6,7 @@ async function loadProjects() {
 
   projects.forEach(project => {
     const card = `
-            <div class = "col-md-6 col-lg-4 filter-item">
+            <div class = "col-md-12">
 
             <article class="card shadow-sm h-100">
             
@@ -37,4 +37,18 @@ async function loadProjects() {
     container.innerHTML += card;
   });
 }
+
+function getData() {
+  const val = document.getElementById("terminalInput");
+  val.addEventListener("keydown", parseCommand);
+}
+
+function parseCommand(e) {
+    if (e.key === "Enter") {
+      const input = document.getElementById("terminalInput").value;
+      console.log(input);
+    }
+}
+
+getData();
 loadProjects();

@@ -1,6 +1,6 @@
 [
   {
-    "title": "Unix-Style Shell with Trie-Based Autocompletion",
+    "title": "Nush: A Unix-Style Shell with Trie-Based Autocompletion",
     "name": "project-shell-team0000",
     "github": "https://github.com/cs5600-sp26/project-shell-team0000",
     "description": "A fully functional Unix-style shell built in C, supporting command execution, piping, I/O redirection, and signal handling. Features a custom trie data structure powering tab-completion for commands and file paths, with hands-on application of OS concepts including process management, file descriptors, and system calls."
