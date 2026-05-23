@@ -6,34 +6,33 @@ async function loadProjects() {
 
   projects.forEach(project => {
     const card = `
-            <div class = "col-md-12">
+      <div class="col-md-12">
+        <article class="card shadow-sm h-100">
+          <div class="card-body">
 
-            <article class="card shadow-sm h-100">
-            
-            <div class="card-body">
+            <!-- Project Name -->
+            <h2 class="card-title h5">
+              ${project.title}
+            </h2>
 
-                <!-- Project Name -->
-                <h2 class="card-title h5">
-                    ${project.title}
-                </h2>
-                
-                <!-- Github Link -->
-                <a 
-                href="${project.github}" 
-                target="_blank" 
-                class="btn btn-dark btn-sm mb-3"
-                >
-                View GitHub
-                </a>
+            <!-- Github Link -->
+            <a
+              href="${project.github}"
+              target="_blank"
+              class="btn btn-dark btn-sm mb-3"
+            >
+              View GitHub
+            </a>
 
-                <p class="card-text">
-                    ${project.description}
-                </p>
-            </div>
+            <p class="card-text">
+              ${project.description}
+            </p>
 
-            </article>
-        </div>
-        `;
+          </div>
+        </article>
+      </div>
+    `;
+
     container.innerHTML += card;
   });
 }
@@ -43,7 +42,8 @@ async function changeDirectory(arg) {
 }
 
 function getData() {
-  const val = document.getElementById("terminalInput");
+  const val = document.getElementById("terminal-input");
+
   val.addEventListener("keydown", parseCommand);
 }
 
@@ -65,7 +65,8 @@ function parseCommand(e) {
   const pages = ["index", "contact", "portfolio"];
 
   if (e.key === "Enter") {
-    const input = document.getElementById("terminalInput").value.trim();
+    const input = document.getElementById("terminal-input").value.trim();
+
     const tokens = input.split(/\s+/);
 
     const command = tokens[0];
@@ -75,14 +76,15 @@ function parseCommand(e) {
       console.log("command not found");
       return;
     }
-    
+
     if (command === "cd") {
       if (pages.includes(arg)) {
         commands[command](arg);
       } else {
-        console.log("Invalid page.")
+        console.log("Invalid page.");
       }
     }
+
     commands[command]();
   }
 }

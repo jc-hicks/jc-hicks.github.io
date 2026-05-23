@@ -10,7 +10,6 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-
     <link href="styles.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,7 +23,6 @@
       crossorigin="anonymous"
     ></script>
   </head>
-
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div class="container">
@@ -54,16 +52,21 @@
         </div>
       </div>
     </nav>
-
-    <div class="container" py-5>
-
-
-      <main class="mt-5">
-        <input type="text" id="terminalInput" placeholder="jsh>">
-        
-        <div class="row g-4 mt-5" id="projects-container"></div>
-      </main>
-
+    <!--Main-->
+    <div class="container py-5">
+      <div id="terminal" class="terminal-container mb-5">
+        <div id="terminal-output" class="terminal-output"></div>
+        <div class="terminal-input-row">
+          <span class="terminal-prompt">jameshicks@portfolio ></span>
+          <input
+            type="text"
+            id="terminal-input"
+            class="terminal-input"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+      <main><div class="row g-4 mt-5" id="projects-container"></div></main>
     </div>
     <script src="script.js"></script>
   </body>
