@@ -23,8 +23,8 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <body class="contact-page">
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
       <div class="container">
         <!--Brand-->
         <a class="navbar-brand text-start" href="index.html">James Hicks</a>
@@ -46,14 +46,14 @@
         >
           <div class="navbar-nav">
             <a class="nav-link" href="index.html">About</a>
-            <a class="nav-link" href="projects.html">Portfolio</a>
+            <a class="nav-link" href="portfolio.html">Portfolio</a>
             <a class="nav-link active" aria-current="page" href="contact.html">Contact me!</a>
           </div>
         </div>
       </div>
     </nav>
     <!--Main-->
-    <div class="container py-5">
+    <div class="container py-5 text-light">
       <div class="row align-items-center mb-5">
         <div class="col-lg-12">
           <h1>Get In Touch</h1>
@@ -63,9 +63,31 @@
 
       <main>
         <div class="row g-4">
+          <!-- Profile / Photo -->
+          <div class="col-lg-4 d-flex align-items-start">
+            <div class="card border-0 bg-transparent text-light w-100">
+              <div class="card-body text-center">
+                <div class="profile-placeholder mb-3" aria-hidden="true">
+                  <!-- simple inline avatar -->
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <circle cx="12" cy="8" r="3.5" stroke="rgba(255,208,0,0.9)" stroke-width="0.9" fill="rgba(255,208,0,0.06)" />
+                    <path d="M4 20c0-3.3137 2.6863-6 6-6h4c3.3137 0 6 2.6863 6 6" stroke="rgba(255,208,0,0.12)" stroke-width="0.9" fill="none" />
+                  </svg>
+                </div>
+                <h4 class="h5 mb-1">James Hicks</h4>
+                <p class="small text-muted mb-2">MSCS Candidate · Northeastern University</p>
+                <p class="mb-2 text-muted small">Boston, MA</p>
+                <div class="d-flex justify-content-center gap-2">
+                  <a href="https://github.com/jc-hicks" target="_blank" class="btn btn-outline-light btn-sm">GitHub</a>
+                  <a href="https://www.linkedin.com/in/james-hicks-57a07b181/" target="_blank" class="btn btn-outline-light btn-sm">LinkedIn</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- Contact Form -->
-          <div class="col-lg-6">
-            <div class="card border-0 shadow-sm">
+          <div class="col-lg-5">
+            <div class="card shadow-sm bg-transparent text-light card-contact">
               <div class="card-body">
                 <h3 class="card-title mb-4">Send me a Message</h3>
                 <form id="contact-form">
@@ -73,7 +95,7 @@
                     <label for="name" class="form-label">Name</label>
                     <input
                       type="text"
-                      class="form-control"
+                      class="form-control bg-transparent text-light border-secondary"
                       id="name"
                       name="name"
                       required
@@ -83,7 +105,7 @@
                     <label for="email" class="form-label">Email</label>
                     <input
                       type="email"
-                      class="form-control"
+                      class="form-control bg-transparent text-light border-secondary"
                       id="email"
                       name="email"
                       required
@@ -93,7 +115,7 @@
                     <label for="subject" class="form-label">Subject</label>
                     <input
                       type="text"
-                      class="form-control"
+                      class="form-control bg-transparent text-light border-secondary"
                       id="subject"
                       name="subject"
                       required
@@ -102,22 +124,22 @@
                   <div class="mb-3">
                     <label for="message" class="form-label">Message</label>
                     <textarea
-                      class="form-control"
+                      class="form-control bg-transparent text-light border-secondary"
                       id="message"
                       name="message"
                       rows="5"
                       required
                     ></textarea>
                   </div>
-                  <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                  <button type="submit" class="btn btn-outline-light w-100">Send Message</button>
                 </form>
               </div>
             </div>
           </div>
 
           <!-- Contact Information -->
-          <div class="col-lg-6">
-            <div class="card border-0 shadow-sm">
+          <div class="col-lg-3">
+            <div class="card border-0 shadow-sm bg-transparent text-light">
               <div class="card-body">
                 <h3 class="card-title mb-4">Contact Information</h3>
                 <div class="mb-4">
@@ -126,17 +148,7 @@
                     <a href="mailto:hicks.jam@northeastern.edu">hicks.jam@northeastern.edu</a>
                   </p>
                 </div>
-                <div class="mb-4">
-                  <h5>Location</h5>
-                  <p>Boston, MA</p>
-                </div>
-                <div class="mb-4">
-                  <h5>Follow Me</h5>
-                  <div class="d-flex gap-3">
-                    <a href="https://github.com/jc-hicks" target="_blank" class="btn btn-outline-primary btn-sm">GitHub</a>
-                    <a href="https://www.linkedin.com/in/james-hicks-57a07b181/" target="_blank" class="btn btn-outline-primary btn-sm">LinkedIn</a>
-                  </div>
-                </div>
+                <!-- location and social links moved to profile column -->
                 <hr />
                 <p class="text-muted small">I'll do my best to respond within 24-48 hours.</p>
               </div>
