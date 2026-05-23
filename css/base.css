@@ -3,18 +3,40 @@
   color: #f5f5f5;
   padding: 1rem;
   border-radius: 10px;
-  height: 50rem;
+  min-height: 50rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  position: relative;
+}
+
+pre {
+  margin: 0;
+  color: #eeff00;
+}
+
+.about-me {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 45%;
+  text-align: right;
+  z-index: 2;
+}
+
+.about-me pre {
+  font-size: 0.7rem;
+  line-height: 1;
+  padding: 1rem;
 }
 
 .terminal-output {
   flex-grow: 1;
   overflow-y: auto;
   margin-bottom: 1rem;
-}
 
+  padding-top: 14rem;
+}
 .terminal-input-row {
   display: flex;
   align-items: center;
