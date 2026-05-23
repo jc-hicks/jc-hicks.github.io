@@ -37,7 +37,11 @@ async function loadProjects() {
   });
 }
 
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
 async function changeDirectory(arg) {
+  appendTerminalLine(`Opening  ${arg}`);
+  await delay(200);
   window.open("http://127.0.0.1:5500/" + arg + ".html");
 }
 
@@ -48,11 +52,14 @@ function getData() {
 }
 
 function showHelp() {
-  console.log("Dummy help text");
+  appendTerminalLine("Available commands:");
+  appendTerminalLine("cd <page>");
+  appendTerminalLine("help");
+  appendTerminalLine("clear");
 }
 
 function clearTerminal() {
-  console.log("invoked clear");
+  document.getElementById("terminal-output").innerHTML = "";
 }
 
 const commands = {
@@ -65,7 +72,13 @@ function parseCommand(e) {
   const pages = ["index", "contact", "portfolio"];
 
   if (e.key === "Enter") {
-    const input = document.getElementById("terminal-input").value.trim();
+    const inputElement = document.getElementById("terminal-input");
+
+    const input = inputElement.value.trim();
+
+    if (!input) return;
+
+    appendTerminalLine(`jsh@portfolio:~$ ${input}`);
 
     const tokens = input.split(/\s+/);
 
@@ -73,20 +86,36 @@ function parseCommand(e) {
     const arg = tokens[1];
 
     if (!commands[command]) {
-      console.log("command not found");
+      appendTerminalLine("Command not found.");
+      inputElement.value = "";
       return;
     }
 
     if (command === "cd") {
-      if (pages.includes(arg)) {
-        commands[command](arg);
-      } else {
-        console.log("Invalid page.");
+
+      if (!pages.includes(arg)) {
+        appendTerminalLine("Invalid page.");
+        inputElement.value = "";
+        return;
       }
+
+      commands[command](arg);
+      inputElement.value = "";
+      return;
     }
 
     commands[command]();
+    inputElement.value = "";
   }
+}
+
+function appendTerminalLine(text) {
+  const output = document.getElementById("terminal-output");
+  const line = document.createElement("div");
+  line.classList.add("terminal-line");
+  line.textContent = text;
+  output.appendChild(line);
+  output.scrollTop = output.scrollHeight;
 }
 
 getData();
