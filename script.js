@@ -78,7 +78,7 @@ function parseCommand(e) {
 
     if (!input) return;
 
-    appendTerminalLine(`jsh@portfolio:~$ ${input}`);
+    appendTerminalLine(`jameshicks@portfolio > ${input}`);
 
     const tokens = input.split(/\s+/);
 
