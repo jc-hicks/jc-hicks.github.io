@@ -14,20 +14,32 @@ function getData() {
 
 function showHelp() {
   appendTerminalLine("Available commands:");
-  appendTerminalLine("cd <page>");
-  appendTerminalLine("help");
-  appendTerminalLine("clear");
+
+  appendTerminalLine("cd <page>: Navigate to a page in a new tab.");
+
+  appendTerminalLine("help:  Display this help menu.");
+
+  appendTerminalLine("clear: Clear the terminal output.");
+
+  appendTerminalLine("ls: List available site directories.");
+
+  appendTerminalLine("whoami: Display information about me!");
 }
 
 function clearTerminal() {
   document.getElementById("terminal-output").innerHTML = "";
 }
 
+function listDirectory() {
+  appendTerminalLine("portfolio   contact   index")
+}
+
 const commands = {
   cd: changeDirectory,
   help: showHelp,
   clear: clearTerminal,
-  whoami: loadWhoAmI
+  whoami: loadWhoAmI,
+  ls: listDirectory,
 };
 
 function parseCommand(e) {
@@ -101,7 +113,7 @@ async function loadWhoAmI() {
             I have a 
             </p>
 
-            <div class="d-flex align-items-center mb-3">
+            <div class="d-flex align-items-center mb-3" "id"="personal-photo">
             <img src="assets/images/Profile pic.jpeg" alt="A photo of me! James Hicks!">
             </div>
 

@@ -2,6 +2,11 @@ main {
   margin-top: 5rem;
 }
 
+.personal-photo {
+  box-shadow: 0 0 20px yellow;
+    filter: grayscale(100%);
+}
+
 .terminal-container {
   background-color: #1a1a1a;
   color: #f5f5f5;
