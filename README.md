@@ -7,6 +7,7 @@ Live Site: https://jc-hicks.github.io/
 ---
 
 ## Author
+
 James Hicks
 
 ## Class Link
@@ -15,7 +16,7 @@ https://northeastern.instructure.com/courses/249954
 
 ## Overview / Objective
 
-This project is a responsive portfolio website designed to emulate a terminal/shell environment. Users can navigate the site using command-style interactions while exploring projects, technical skills, and personal information. 
+This project is a responsive portfolio website designed to emulate a terminal/shell environment. Users can navigate the site using command-style interactions while exploring projects, technical skills, and personal information.
 
 The site was developed to strengthen frontend development skills and demonstrate proficiency with:
 

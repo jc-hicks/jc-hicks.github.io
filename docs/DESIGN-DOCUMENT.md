@@ -2,7 +2,7 @@
 
 ## Project Description
 
-This project is a personal portfolio website developed using vanilla HTML5, CSS3, and ES6+ JavaScript modules. The site serves as a professional homepage that showcases my projects, technical skills, interests, and contact information. 
+This project is a personal portfolio website developed using vanilla HTML5, CSS3, and ES6+ JavaScript modules. The site serves as a professional homepage that showcases my projects, technical skills, interests, and contact information.
 
 The website follows a terminal-inspired design aesthetic to differentiate it from traditional portfolio sites and demonstrate frontend development skills. THe homepage features an interactive terminal interface that allows visitors to explore the site in a unique way. The portfolio page dynamically loads project information from a JSON file, and the contact page provides links to social profiles and contact methods.
 
@@ -104,6 +104,7 @@ Background:
 - Muted Text: `#b0b0b0`
 
 ## Wireframes & Mockups
+
 Home Page/ Index Page
 ![Index Wireframe](../assets/images/IndexWireframe.png)
 
@@ -112,4 +113,3 @@ Portfolio Page / Projects Page
 
 Contact Page
 ![Contact Wireframe](../assets/images/ContactWireframe.png)
-
