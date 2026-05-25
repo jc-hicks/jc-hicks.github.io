@@ -105,7 +105,7 @@ async function loadWhoAmI() {
             </div>
 
             <p class="whoami-text">
-            I am a HRIS Analyst at Point32Health, currently pursuing a Master's in Computer Science at Northeastern University. I spent a few years working in HRIS/HRIT — administering systems, testing integrations, and sitting in a lot of meetings between people who knew what they wanted and the analysts who had to build it. 
+            I am a HRIS Analyst at Point32Health, currently pursuing a Master's in Computer Science at Northeastern University. I spent a few years working in HRIS/HRIT administering systems, testing integrations, and sitting in a lot of meetings between managers or HR Partners with a HCM software need, and the analysts who built the configuration to meet that need. 
             Eventually I decided I'd rather be on the engineering side, so I enrolled in Northeastern's MSCS program and started learning Software Engineering from scratch. 
             While not traditional, my background is still very beneficial. Through my experiences in HRIS I learned to develop and test large systems, and I know how to communicate across technical and non-technical teams to effectively manage stakeholder expectations.
             

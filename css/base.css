@@ -1,727 +1,109 @@
+/* Base stylesheet: shared rules used across pages (header, footer, body layout) */
+
 main {
-  margin-top: 5rem;
   flex: 1;
-}
-
-.personal-photo img {
-  width: 180px;
-  height: 180px;
-
-  border-radius: 50%;
-
-  object-fit: cover;
-
-  box-shadow: 0 0 20px rgba(255, 208, 0, 0.25);
-
-  border: 2px solid rgba(255, 208, 0, 0.2);
-}
-
-.whoami-title {
-  margin-bottom: 2rem;
-}
-
-.whoami-panel {
-  margin-top: 2rem;
-
-  background-color: rgba(26, 26, 26, 0.92);
-
-  border: 1px solid rgba(255, 208, 0, 0.18);
-  border-left: 4px solid #ffd000;
-
-  border-radius: 10px;
-
-  padding: 1.5rem;
-
-  color: #d9d9d9;
-
-  opacity: 0;
-  transform: translateY(10px);
-
-  animation: whoamiReveal 3s ease forwards;
-
-  box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.35),
-    0 0 0 1px rgba(255, 208, 0, 0.03);
-}
-
-@keyframes whoamiReveal {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.whoami-text {
-  line-height: 1.7;
-
-  color: #d9d9d9;
-
-  font-size: 0.95rem;
-}
-
-.terminal-container {
-  background-color: #1a1a1a;
-  color: #f5f5f5;
-  border: 1px solid #312c18;
-
-  padding: 1rem;
-  border-radius: 10px;
-
-  height: 25rem;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.35),
-    0 0 0 1px rgba(255, 208, 0, 0.05);
-
-  position: relative;
-  overflow: hidden;
-  box-sizing: border-box;
-  animation: terminalFade 1s ease;
-}
-
-@keyframes terminalFade {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 body {
   background: radial-gradient(circle at top left, #3a3a3a, #222);
-
   background-size: 200% 200%;
-
   animation: bgMove 12s ease infinite;
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
-}
-
-.footer {
-  margin-top: auto;
-
-  background-color: #1a1a1a;
-
-  border-top: 1px solid rgba(255, 208, 0, 0.15);
-
-  color: #d9d9d9;
-
-  padding: 1rem 0;
-
-  font-size: 0.9rem;
-
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.footer::before {
-  display: block;
-
-  height: 1px;
-
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(255, 208, 0, 0.35),
-    transparent
-  );
-
-  margin-bottom: 1rem;
 }
 
 @keyframes bgMove {
   0% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0% 50%;
   }
 }
 
+.footer {
+  margin-top: auto;
+  background-color: #1a1a1a;
+  border-top: 1px solid rgba(255, 208, 0, 0.15);
+  color: #d9d9d9;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer::before {
+  display: block;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 208, 0, 0.35),
+    transparent
+  );
+  margin-bottom: 1rem;
+}
+
 .navbar {
   background-color: #1a1a1a;
-
   border-bottom: 1px solid rgba(255, 208, 0, 0.35);
-
   padding-top: 0.9rem;
   padding-bottom: 0.9rem;
-
   backdrop-filter: blur(8px);
-
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }
-
 .navbar-brand {
   color: #ffd000;
-
   font-weight: 700;
   letter-spacing: 1px;
-
   text-transform: uppercase;
-
   font-size: 0.95rem;
 }
-
 .nav-link {
   color: #d9d9d9;
-
   position: relative;
-
   transition:
     color 0.2s ease,
     opacity 0.2s ease;
-
   font-size: 0.92rem;
-
   letter-spacing: 0.5px;
 }
-
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
   color: #ffd000;
 }
-
 .navbar .nav-link::after {
   content: "";
-
   position: absolute;
-
   left: 0;
   bottom: -4px;
-
   width: 0%;
   height: 1px;
-
   background-color: #ffd000;
-
   transition: width 0.25s ease;
 }
-
 .navbar .nav-link:hover::after,
 .navbar .nav-link.active::after {
   width: 100%;
 }
 
-pre {
-  margin: 0;
-  color: #ffd000;
-}
-
-.about-me {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-
-  width: 45%;
-  max-width: 100%;
-
-  overflow-wrap: break-word;
-}
-
-.about-me pre {
-  white-space: pre-wrap;
-  word-break: break-word;
-
-  font-size: clamp(0.5rem, 0.9vw, 0.8rem);
-}
-
-.logo {
-  text-align: right;
-}
-
-.about-me-section {
-  text-align: left;
-  display: flex;
-}
-
-@media (max-width: 992px) {
-  .about-me {
-    position: static;
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-
-  .terminal-output {
-    padding-right: 0;
-  }
-
-  .terminal-container {
-    height: auto;
-    min-height: 50rem;
-  }
-
-  .logo {
-    text-align: left;
-  }
-}
-
-.terminal-output {
-  flex-grow: 1;
-
-  overflow-y: auto;
-
-  margin-bottom: 1rem;
-
-  padding-right: 50%;
-
-  color: #d9d9d9;
-
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.terminal-output::-webkit-scrollbar {
-  display: none;
-}
-
-.terminal-input-row {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.terminal-prompt {
-  color: #ffd000;
-
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    "Open Sans",
-    "Helvetica Neue",
-    sans-serif;
-}
-
-.terminal-input {
-  flex-grow: 1;
-
-  background: transparent;
-
-  border: none;
-  outline: none;
-
-  color: #ffffff;
-
-  caret-color: #ffd000;
-  caret-shape: block;
-
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    "Open Sans",
-    "Helvetica Neue",
-    sans-serif;
-}
-
-.terminal-line {
-  font-family: monospace;
-
-  color: #e0e0e0;
-
-  word-break: break-word;
-  overflow-wrap: break-word;
-
-  margin-bottom: 0.5rem;
-  animation: lineAppear 0.2s ease;
-}
-
-@keyframes lineAppear {
-  from {
-    opacity: 0;
-    transform: translateY(3px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Profile placeholder used on contact page */
-.profile-placeholder {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 208, 0, 0.06),
-    rgba(255, 208, 0, 0.02)
-  );
-  border: 1px solid rgba(255, 208, 0, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffd000;
-  font-weight: 700;
-  font-size: 1rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
-}
-
-@media (max-width: 768px) {
-  .profile-placeholder {
-    width: 120px;
-    height: 120px;
-  }
-}
-
-.profile-placeholder svg {
-  width: 60%;
-  height: 60%;
-  display: block;
-}
-
-/* Contact page specific tweaks for legibility and consistency */
-.contact-page {
-  color: #d9d9d9;
-}
-
-.contact-page a {
-  color: #ffd000;
-  text-decoration: none;
-}
-
-.contact-page a:hover {
-  color: #ffd000;
-  text-decoration: underline;
-}
-
-.contact-page .text-muted {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.contact-page .form-label,
-.contact-page .card-title,
-.contact-page .card-body,
-.contact-page .footer-text,
-.contact-page p,
-.contact-page h1,
-.contact-page h3,
-.contact-page h4,
-.contact-page .small {
-  color: #d9d9d9;
-}
-
-.contact-page .form-control {
-  color: #ffffff;
-  background-color: transparent;
-  border-color: rgba(255, 255, 255, 0.12);
-}
-
-.contact-page .form-control::placeholder {
-  color: rgba(217, 217, 217, 0.5);
-}
-
-.contact-page .btn-outline-light {
-  color: #d9d9d9;
-  border-color: rgba(255, 255, 255, 0.18);
-}
-
-.contact-page .btn-outline-light:hover,
-.contact-page .btn-outline-light:focus {
-  color: #1a1a1a;
-  background-color: #ffd000;
-  border-color: #ffd000;
-}
-
-.contact-page .card-contact {
-  background-color: rgba(26, 26, 26, 0.6);
-  border: 1px solid rgba(255, 208, 0, 0.06);
-}
-
-.contact-page .text-muted {
-  color: rgba(255, 255, 255, 0.9);
-}
-.contact-page .form-label {
-  color: #d9d9d9;
-}
-.contact-page .form-control {
-  color: #ffffff;
-  background-color: transparent;
-  border-radius: 6px;
-}
-.contact-page .form-control.border-secondary {
-  border-color: rgba(255, 255, 255, 0.12);
-}
-.contact-page .form-control:focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 208, 0, 0.08);
-  border-color: rgba(255, 208, 0, 0.35);
-}
-.contact-page ::placeholder {
-  color: rgba(255, 255, 255, 0.56);
-  opacity: 1;
-}
-.contact-page a,
-.contact-page a:link,
-.contact-page a:visited {
-  color: #ffd000;
-}
-.contact-page a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-.contact-page hr {
-  border-color: rgba(255, 255, 255, 0.06);
-}
-.contact-page .btn-outline-light {
-  border-color: rgba(255, 255, 255, 0.18);
-}
-
-/* Stronger card and input contrast for form on contact page */
-.contact-page .card-contact {
-  background-color: rgba(12, 12, 12, 0.6);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.65);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-}
-.contact-page .card-contact .card-body {
-  padding: 1.5rem;
-}
-.contact-page .card-contact .card-title {
-  color: #ffd000;
-}
-.contact-page .card-contact .form-control {
-  background-color: rgba(255, 255, 255, 0.02);
-  border-color: rgba(255, 255, 255, 0.18);
-  color: #ffffff;
-}
-.contact-page .card-contact .form-control::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-.contact-page .card-contact .btn-outline-light {
-  border-color: rgba(255, 255, 255, 0.22);
-}
-
-.project-card {
-  background-color: rgba(26, 26, 26, 0.92);
-
-  border: 1px solid rgba(255, 208, 0, 0.08);
-
-  border-left: 4px solid #ffd000;
-
-  border-radius: 12px;
-
-  padding: 1.5rem;
-
-  color: #d9d9d9;
-
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
-
-  box-shadow:
-    0 10px 24px rgba(0, 0, 0, 0.28),
-    0 0 0 1px rgba(255, 208, 0, 0.03);
-
-  opacity: 0;
-
-  animation: projectReveal 0.5s ease forwards;
-}
-
-@keyframes projectReveal {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-
-  border-color: rgba(255, 208, 0, 0.25);
-
-  box-shadow:
-    0 16px 32px rgba(0, 0, 0, 0.4),
-    0 0 18px rgba(255, 208, 0, 0.05);
-}
-
-.project-title {
-  color: #ffd000;
-
-  font-family: monospace;
-
-  margin-bottom: 1rem;
-
-  font-size: 1.1rem;
-
-  letter-spacing: 0.5px;
-}
-
-.project-description {
-  color: #cfcfcf;
-
-  line-height: 1.7;
-
-  font-size: 0.95rem;
-
-  margin-top: 1rem;
-}
-
-.project-link {
-  display: inline-block;
-
-  margin-top: 0.5rem;
-
-  padding: 0.55rem 1rem;
-
-  border: 1px solid rgba(255, 208, 0, 0.22);
-
-  border-radius: 6px;
-
-  color: #ffd000;
-
-  text-decoration: none;
-
-  font-family: monospace;
-
-  transition:
-    background-color 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease;
-}
-
-.project-link:hover {
-  background-color: rgba(255, 208, 0, 0.08);
-
-  border-color: rgba(255, 208, 0, 0.35);
-
-  color: #ffffff;
-}
-
-.portfolio-header {
-  color: #ffd000;
-  font-family: monospace;
-}
-
-.project-img {
-  width: 100%;
-
-  height: 220px;
-
-  object-fit: cover;
-
-  border-radius: 10px;
-
-  margin-top: 1.5rem;
-
-  border: 1px solid rgba(255, 208, 0, 0.08);
-
-  box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.35),
-    0 0 0 1px rgba(255, 208, 0, 0.03);
-
-  filter: grayscale(20%);
-
-  transition:
-    transform 0.3s ease,
-    filter 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.project-card:hover .project-img {
-  transform: scale(1.02);
-
-  filter: grayscale(0%);
-
-  box-shadow:
-    0 12px 28px rgba(0, 0, 0, 0.45),
-    0 0 18px rgba(255, 208, 0, 0.06);
-}
-
-/* Stronger contact-page card visuals and profile image rules */
-.contact-page .profile-card,
-.contact-page .card-contact,
-.contact-page .info-card {
-  background-color: rgba(26, 26, 26, 0.92);
-  border: 1px solid rgba(255, 208, 0, 0.14);
-  border-radius: 12px;
-  color: #d9d9d9;
-  box-shadow:
-    0 12px 36px rgba(0, 0, 0, 0.65),
-    0 0 0 1px rgba(255, 208, 0, 0.02);
-}
-
-.contact-page .card-contact {
-  border-left: 4px solid #ffd000;
-}
-
-.contact-page .profile-card .personal-photo {
+/* Shared avatar/photo style used on contact and whoami panels */
+.personal-photo {
   width: 180px;
   height: 180px;
   overflow: hidden;
   border-radius: 50%;
   margin: 0 auto;
   display: block;
-  border: 2px solid rgba(255,208,0,0.18);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  border: 2px solid rgba(255, 208, 0, 0.18);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
 }
-
-.contact-page .profile-card .personal-photo img {
+.personal-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-.contact-page .profile-subtitle,
-.contact-page .profile-location,
-.contact-page .info-card .text-muted,
-.contact-page .info-card p,
-.contact-page .card-body .small {
-  color: #d9d9d9;
-}
-
-.contact-page .info-card hr {
-  border-color: rgba(255, 255, 255, 0.06);
-}
-
-.contact-page .card-contact .form-control {
-  border-color: rgba(255,255,255,0.22);
-}
-
-.contact-page .card-contact .btn-outline-light {
-  border-color: rgba(255,255,255,0.28);
-}
-
-.contact-page .btn-outline-light:hover,
-.contact-page .btn-outline-light:focus {
-  color: #1a1a1a;
-  background-color: #ffd000;
-  border-color: #ffd000;
 }

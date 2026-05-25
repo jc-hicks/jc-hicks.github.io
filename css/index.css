@@ -1,0 +1,175 @@
+/* Index page CSS (trimmed) */
+
+/* Terminal and about-me (index only) */
+pre {
+  margin: 0;
+  color: #ffd000;
+}
+
+.about-me {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 45%;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+.about-me pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: clamp(0.5rem, 0.9vw, 0.8rem);
+}
+.logo {
+  text-align: right;
+}
+.about-me-section {
+  text-align: left;
+  display: flex;
+}
+
+@media (max-width: 992px) {
+  .about-me {
+    position: static;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .logo {
+    text-align: left;
+  }
+}
+
+/* Terminal (index page only) */
+.terminal-container {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  border: 1px solid #312c18;
+  padding: 1rem;
+  border-radius: 10px;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 208, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  animation: terminalFade 1s ease;
+}
+
+@keyframes terminalFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.terminal-output {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  padding-right: 50%;
+  color: #d9d9d9;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.terminal-output::-webkit-scrollbar {
+  display: none;
+}
+.terminal-input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.terminal-prompt {
+  color: #ffd000;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+.terminal-input {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  caret-color: #ffd000;
+  caret-shape: block;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+.terminal-line {
+  font-family: monospace;
+  color: #e0e0e0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin-bottom: 0.5rem;
+  animation: lineAppear 0.2s ease;
+}
+@keyframes lineAppear {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Whoami panel (injected into #who-am-i) */
+.whoami-panel {
+  margin-top: 2rem;
+  background-color: rgba(26, 26, 26, 0.92);
+  border: 1px solid rgba(255, 208, 0, 0.18);
+  border-left: 4px solid #ffd000;
+  border-radius: 10px;
+  padding: 1.5rem;
+  color: #d9d9d9;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: whoamiReveal 3s ease forwards;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 208, 0, 0.03);
+}
+@keyframes whoamiReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.whoami-text {
+  margin-top: 1rem;
+  line-height: 1.7;
+  color: #d9d9d9;
+  font-size: 0.95rem;
+}

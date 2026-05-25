@@ -1,0 +1,99 @@
+/* Contact page CSS (trimmed) */
+
+/* Profile and contact-form specific styles */
+.contact-page {
+  color: #d9d9d9;
+}
+.contact-page a,
+.contact-page a:link,
+.contact-page a:visited {
+  color: #ffd000;
+}
+.contact-page a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.contact-page .profile-card,
+.contact-page .info-card {
+  background-color: rgba(26, 26, 26, 0.92);
+  border: 1px solid rgba(255, 208, 0, 0.14);
+  border-radius: 12px;
+  color: #d9d9d9;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.65);
+}
+.contact-page .card-contact {
+  border-left: 4px solid #ffd000;
+  background-color: rgba(12, 12, 12, 0.6);
+  border-radius: 12px;
+}
+
+.contact-page .personal-photo {
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  border: 2px solid rgba(255, 208, 0, 0.18);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+.contact-page .personal-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-page .profile-subtitle,
+.contact-page .profile-location,
+.contact-page .info-card .text-muted,
+.contact-page .info-card p,
+.contact-page .card-body .small {
+  color: #d9d9d9;
+}
+.contact-page .profile-subtitle,
+.contact-page .profile-location {
+  color: #d9d9d9;
+  opacity: 0.95;
+}
+
+.contact-page .info-card hr {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Form controls */
+.contact-page .card-contact .card-body {
+  padding: 1.5rem;
+}
+.contact-page .card-contact .form-control {
+  background-color: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  border-radius: 6px;
+}
+.contact-page .card-contact .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.contact-page .card-contact .form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 208, 0, 0.08);
+  border-color: rgba(255, 208, 0, 0.35);
+}
+
+.contact-page .btn-outline-light {
+  color: #d9d9d9;
+  border-color: rgba(255, 255, 255, 0.18);
+}
+.contact-page .btn-outline-light:hover,
+.contact-page .btn-outline-light:focus {
+  color: #1a1a1a;
+  background-color: #ffd000;
+  border-color: #ffd000;
+}
+
+@media (max-width: 768px) {
+  .contact-page .personal-photo {
+    width: 140px;
+    height: 140px;
+  }
+}
