@@ -2,180 +2,103 @@
 
 ## Project Description
 
-[Add detailed project description]
+This project is a personal portfolio website developed using vanilla HTML5, CSS3, and ES6+ JavaScript modules. The site serves as a professional homepage that showcases my projects, technical skills, interests, and contact information. The website follows a terminal-inspired design aesthetic to differentiate it from traditional portfolio sites and demonstrate frontend development skills.
+
+The project is fully static and deployed publicly using GitHub Pages. It emphasizes responsive design, semantic HTML, accessibility, and modern JavaScript practices without relying on frontend frameworks or component libraries.
+
+---
 
 ## User Personas
 
-### Persona 1: [Name]
+### Persona 1: Technical Recruiter
 
-[Description, goals, background]
+A recruiter reviewing software engineering candidates for internships or entry-level roles.
 
-### Persona 2: [Name]
+Goals:
 
-[Description, goals, background]
+- Quickly understand technical skills
+- View completed projects
+- Access GitHub and LinkedIn profiles
+- Evaluate frontend development ability
+
+Background:
+
+- Limited technical depth
+- Reviews many portfolios quickly
+- Values clean design and professionalism
+
+### Persona 2: Computer Science Student
+
+A fellow student or peer interested in projects, coursework, and programming techniques.
+
+Goals:
+
+- Explore projects and source code
+- Learn about technologies used
+- Interact with the terminal interface
+- View project organization and design choices
+
+Background:
+
+- Familiar with web development concepts
+- Interested in implementation details
+- Likely browsing on desktop devices
+
+---
 
 ## User Stories
 
 ### Homepage
 
-- [ ] As a visitor, I can view the homepage and understand the site's purpose
-- [ ] As a visitor, I can navigate to different sections from the header
+- [x] As a visitor, I can view the homepage and understand the site's purpose
+- [x] As a visitor, I can navigate to different sections from the navigation bar
+- [x] As a visitor, I can interact with a custom terminal interface
 
-### Projects Page
+### Portfolio Page
 
-- [ ] As a visitor, I can browse all projects
-- [ ] As a visitor, I can filter projects by category
-- [ ] As a visitor, I can view project details
+- [x] As a visitor, I can browse all projects
+- [x] As a visitor, I can view project descriptions and technologies used
+- [x] As a visitor, I can open GitHub repositories and live demos
 
-### About Page
+### Contact Page
 
-- [ ] As a visitor, I can learn about the site creator
-- [ ] As a visitor, I can find links to social profiles
-- [ ] As a visitor, I can understand the creator's background and interests
+- [x] As a visitor, I can learn about the site creator
+- [x] As a visitor, I can find links to social profiles
+- [x] As a visitor, I can contact the creator through listed platforms
+
+---
 
 ## Feature List
 
 ### Core Features
 
-- [x] Multi-page structure
+- [x] Multi-page website structure, 2 created by me, 1 by AI
 - [x] Responsive design
-- [x] Semantic HTML
-- [ ] Interactive components
-- [ ] Contact functionality
-
-### Nice-to-Have Features
-
-- [ ] Dark mode toggle
-- [ ] Search functionality
-- [ ] Project filtering
-- [ ] Newsletter signup
-- [ ] Analytics integration
+- [x] Semantic HTML5 structure
+- [x] ES6 module-based JavaScript
+- [x] Dynamic project loading from JSON
+- [x] Interactive terminal component
+- [x] Public GitHub Pages deployment
 
 ## Design Goals
 
-- Clean, modern aesthetic
-- Professional appearance
-- Easy navigation
-- Quick load times
-- Mobile-first approach
-- Accessibility-first design
+- Create a clean and professional portfolio
+- Differentiate the site with a terminal-inspired interface
+- Maintain fast loading speeds
+- Ensure mobile responsiveness
+- Use accessible and semantic HTML
+- Demonstrate frontend engineering skills without frameworks
+
+---
 
 ## Design System
 
 ### Color Palette
 
-[Define colors]
-
-### Typography
-
-[Define font families and scales]
-
-### Spacing System
-
-[Define spacing values]
-
-### Component Library
-
-[List reusable components]
-
-## Accessibility Considerations
-
-- WCAG 2.1 Level AA compliance
-- Semantic HTML structure
-- Keyboard navigation support
-- Focus indicators
-- Color contrast ratios
-- Screen reader optimization
-- Form accessibility
+- Background: `#1a1a1a`
+- Secondary Background: `#2b2b2b`
+- Accent Color: `#ffd000`
+- Primary Text: `#f5f5f5`
+- Muted Text: `#b0b0b0`
 
 ## Wireframes & Mockups
-
-### Homepage Layout
-
-[Placeholder for wireframe]
-
-### Projects Layout
-
-[Placeholder for wireframe]
-
-### Mobile Layout
-
-[Placeholder for wireframe]
-
-## Technical Architecture
-
-### Frontend Stack
-
-- HTML5 + Semantic markup
-- CSS3 (Flexbox/Grid, no framework)
-- Vanilla JavaScript (ES6+ modules)
-- No build tools required
-- Static site deployment
-
-### Module Architecture
-
-```
-js/
-├── main.js (entry point)
-├── modules/
-│   ├── dom-utils.js (DOM helpers)
-│   └── nav.js (navigation)
-├── utilities/
-│   └── helpers.js (utility functions)
-└── components/
-    └── (feature components)
-```
-
-### CSS Architecture
-
-```
-css/
-├── base.css (reset, variables, typography)
-├── layout.css (flexbox, grid, containers)
-├── components.css (buttons, cards, sections)
-└── utilities.css (spacing, text, display)
-```
-
-## Deployment Plan
-
-### Pre-Deployment Checklist
-
-- [ ] All pages created and styled
-- [ ] JavaScript modules implemented
-- [ ] ESLint passes
-- [ ] Prettier formatting applied
-- [ ] W3C HTML validation passed
-- [ ] WCAG accessibility checked
-- [ ] Lighthouse audit 90+
-- [ ] All links working
-- [ ] Images optimized
-- [ ] Responsive testing complete
-
-### GitHub Pages Setup
-
-1. Push code to main branch
-2. Enable GitHub Pages in repository settings
-3. Select main branch as source
-4. Verify site is live
-
-### Performance Optimization
-
-- Image optimization
-- CSS minification (optional)
-- Asset lazy loading
-- Browser caching headers
-- Lighthouse optimization
-
-## Future Enhancements
-
-- [ ] Blog section
-- [ ] Project filtering
-- [ ] Dark mode
-- [ ] Contact form
-- [ ] Analytics
-- [ ] SEO optimization
-- [ ] Progressive Web App features
-
-## Notes & Considerations
-
-[Add any project-specific notes]

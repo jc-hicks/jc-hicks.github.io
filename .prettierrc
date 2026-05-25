@@ -7,5 +7,5 @@
   "useTabs": false,
   "semi": true,
   "arrowParens": "avoid",
-  "htmlWhitespaceSensitivity": "css"
+  "htmlWhitespaceSensitivity": "ignore"
 }
