@@ -28,6 +28,12 @@ There are a few creative features on this page, but the primary creative feature
 
 ---
 
+
+## AI Generated page
+
+While the index.html page, and portfolio.html pages were written by me, contact.html was created using 
+---
+
 ## Features
 
 - Terminal-inspired UI
