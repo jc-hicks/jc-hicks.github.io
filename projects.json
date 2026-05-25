@@ -4,6 +4,7 @@
     "name": "project-shell-team0000",
     "github": "https://github.com/cs5600-sp26/project-shell-team0000",
     "img": "assets/images/nush.png",
+    "alt": "A screenshot of the Nush shell system.",
     "description": "A fully functional Unix-style shell built in C, supporting command execution, piping, I/O redirection, and signal handling. Features a custom trie data structure powering tab-completion for commands and file paths, with hands-on application of OS concepts including process management, file descriptors, and system calls."
   },
   {
@@ -11,13 +12,15 @@
     "name": "Hicks_final",
     "github": "https://github.com/jc-hicks/LeukemiaNotebook",
     "img": "assets/images/leukemiacell.jpg",
+    "alt": "A sample image of a cell.",
     "description": "Trained and compared three CNN architectures — Custom CNN, ResNet, and EfficientNet — on approximately 170,000 stained bone marrow cell images from the Munich Leukemia Laboratory dataset across 945 patients. ResNet achieved the strongest results with 88.7% accuracy and 95.4% recall. Applied transfer learning, Stratified K-Fold Cross-Validation, Hyperband hyperparameter tuning, and class weighting to address severe class imbalance. Written up as a full research paper in IEEE format."
   },
   {
     "title": "MyMovieList",
     "name": "MyMovieList",
     "github": "https://github.com/jc-hicks/MyMovieList",
-    "img": "assets/images/mymovielistscreen.png",
+    "img": "assets/images/Mymovielistscreen.png",
+    "alt": "A screenshot of the MyMovieList Java application.",
     "description": "A Java application for tracking and managing personal movie libraries, demonstrating object-oriented design principles with clean class architecture and separation of concerns. Implements features for adding, organizing, and updating movie entries."
   }
 ]

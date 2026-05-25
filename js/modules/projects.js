@@ -39,7 +39,7 @@ async function loadProjects() {
           <img
             class="project-img"
             src="${project.img}"
-            alt="${project.title}"
+            alt="${project.alt}"
           >
 
         </article>
