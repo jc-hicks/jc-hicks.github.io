@@ -399,9 +399,66 @@ pre {
   display: block;
 }
 
-/* Contact page contrast overrides */
+/* Contact page specific tweaks for legibility and consistency */
+.contact-page {
+  color: #d9d9d9;
+}
+
+.contact-page a {
+  color: #ffd000;
+  text-decoration: none;
+}
+
+.contact-page a:hover {
+  color: #ffd000;
+  text-decoration: underline;
+}
+
 .contact-page .text-muted {
-  color: rgba(255, 255, 255, 0.66);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-page .form-label,
+.contact-page .card-title,
+.contact-page .card-body,
+.contact-page .footer-text,
+.contact-page p,
+.contact-page h1,
+.contact-page h3,
+.contact-page h4,
+.contact-page .small {
+  color: #d9d9d9;
+}
+
+.contact-page .form-control {
+  color: #ffffff;
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.contact-page .form-control::placeholder {
+  color: rgba(217, 217, 217, 0.5);
+}
+
+.contact-page .btn-outline-light {
+  color: #d9d9d9;
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.contact-page .btn-outline-light:hover,
+.contact-page .btn-outline-light:focus {
+  color: #1a1a1a;
+  background-color: #ffd000;
+  border-color: #ffd000;
+}
+
+.contact-page .card-contact {
+  background-color: rgba(26, 26, 26, 0.6);
+  border: 1px solid rgba(255, 208, 0, 0.06);
+}
+
+.contact-page .text-muted {
+  color: rgba(255, 255, 255, 0.9);
 }
 .contact-page .form-label {
   color: #d9d9d9;
@@ -605,4 +662,66 @@ pre {
   box-shadow:
     0 12px 28px rgba(0, 0, 0, 0.45),
     0 0 18px rgba(255, 208, 0, 0.06);
+}
+
+/* Stronger contact-page card visuals and profile image rules */
+.contact-page .profile-card,
+.contact-page .card-contact,
+.contact-page .info-card {
+  background-color: rgba(26, 26, 26, 0.92);
+  border: 1px solid rgba(255, 208, 0, 0.14);
+  border-radius: 12px;
+  color: #d9d9d9;
+  box-shadow:
+    0 12px 36px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(255, 208, 0, 0.02);
+}
+
+.contact-page .card-contact {
+  border-left: 4px solid #ffd000;
+}
+
+.contact-page .profile-card .personal-photo {
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  border: 2px solid rgba(255,208,0,0.18);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+.contact-page .profile-card .personal-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-page .profile-subtitle,
+.contact-page .profile-location,
+.contact-page .info-card .text-muted,
+.contact-page .info-card p,
+.contact-page .card-body .small {
+  color: #d9d9d9;
+}
+
+.contact-page .info-card hr {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.contact-page .card-contact .form-control {
+  border-color: rgba(255,255,255,0.22);
+}
+
+.contact-page .card-contact .btn-outline-light {
+  border-color: rgba(255,255,255,0.28);
+}
+
+.contact-page .btn-outline-light:hover,
+.contact-page .btn-outline-light:focus {
+  color: #1a1a1a;
+  background-color: #ffd000;
+  border-color: #ffd000;
 }
