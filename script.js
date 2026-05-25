@@ -97,23 +97,22 @@ async function loadWhoAmI() {
   const container = document.getElementById("who-am-i");
 
   const card = `
-      <div class="col-md-12">
-        <article class="card shadow-sm h-100">
-          <div class="card-body">
-
-            <!-- Project Name -->
+      <div class="whoami-panel">
+            <div class="whoami-title">
             <h2 class="card-title h5">
               Hi! My name is James Hicks!
             </h2>
+            </div>
 
-            <p class="card-text">
-            I am a HRIS Analyst at Point32Health, currently pursuing a Master's in Computer Science at Northeastern University. I spent a few years working in HR tech — administering systems, testing integrations, and sitting in a lot of meetings between people who knew what they wanted and the analysts who had to build it. 
-            Eventually I decided I'd rather be on the engineering side, so I enrolled in Northeastern's MSCS program and started from scratch. 
-            That background doesn't hurt though. I know what it looks like when software fails in production, and I know how to communicate across technical and non-technical teams, and how to effectively manage stakeholder expectations.
-            I have a 
+            <p class="whoami-text">
+            I am a HRIS Analyst at Point32Health, currently pursuing a Master's in Computer Science at Northeastern University. I spent a few years working in HRIS/HRIT — administering systems, testing integrations, and sitting in a lot of meetings between people who knew what they wanted and the analysts who had to build it. 
+            Eventually I decided I'd rather be on the engineering side, so I enrolled in Northeastern's MSCS program and started learning Software Engineering from scratch. 
+            While not traditional, my background is still very beneficial. Through my experiences in HRIS I learned to develop and test large systems, and I know how to communicate across technical and non-technical teams to effectively manage stakeholder expectations.
+            
+            I have a strong interest in low-level systems, edge ai, and machine learning.
             </p>
 
-            <div class="d-flex align-items-center mb-3" "id"="personal-photo">
+            <div class="personal-photo">
             <img src="assets/images/Profile pic.jpeg" alt="A photo of me! James Hicks!">
             </div>
 
