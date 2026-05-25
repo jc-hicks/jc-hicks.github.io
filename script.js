@@ -3,7 +3,9 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 async function changeDirectory(arg) {
   appendTerminalLine(`Opening  ${arg}`);
   await delay(200);
-  window.open("http://127.0.0.1:5500/" + arg + ".html");
+  // Build a URL relative to the current page so we don't hard-code the domain/port.
+  const targetUrl = new URL(`${arg}.html`, window.location.href).href;
+  window.open(targetUrl, "_blank");
 }
 
 function getData() {
