@@ -4,31 +4,44 @@ async function loadProjects() {
 
   const container = document.getElementById("projects-container");
 
-  projects.forEach(project => {
+  projects.forEach((project, index) => {
+    const githubButton = project.github
+      ? `
+        <a
+          href="${project.github}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="project-link"
+        >
+         <i class="bi bi-github"></i>
+      GitHub
+    </a>
+      `
+      : "";
+
     const card = `
-      <div class="col-md-12">
-        <article class="card shadow-sm h-100">
-          <div class="card-body">
+      <div
+        class="col-xl-4 col-lg-6"
+        style="animation-delay: ${index * 0.15}s"
+      >
+        <article class="project-card h-100">
 
-            <!-- Project Name -->
-            <h2 class="card-title h5">
-              ${project.title}
-            </h2>
+          <h2 class="project-title">
+            ${project.title}
+          </h2>
 
-            <!-- Github Link -->
-            <a
-              href="${project.github}"
-              target="_blank"
-              class="btn btn-dark btn-sm mb-3"
-            >
-              View GitHub
-            </a>
+          ${githubButton}
 
-            <p class="card-text">
-              ${project.description}
-            </p>
+          <p class="project-description">
+            ${project.description}
+          </p>
 
-          </div>
+          <img
+            class="project-img"
+            src="${project.img}"
+            alt="${project.title}"
+          >
+
         </article>
       </div>
     `;
