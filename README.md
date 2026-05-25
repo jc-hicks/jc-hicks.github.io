@@ -129,11 +129,14 @@ GPT-5 mini
 
 ### Homepage
 
-![Homepage Screenshot](assets/homepage.png)
+![alt text](assets/images/PortfolioSIte.png)
 
 ### Projects Section
 
-![Projects Screenshot](assets/projects.png)
+![alt text](assets/images/ProjectsPage.png)
+
+### Contact Page
+![alt text](assets/images/ContactMePage.png)
 
 ---
 
