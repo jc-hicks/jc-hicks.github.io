@@ -31,7 +31,7 @@ function clearTerminal() {
 }
 
 function listDirectory() {
-  appendTerminalLine("portfolio   contact   index")
+  appendTerminalLine("portfolio   contact   index");
 }
 
 const commands = {
